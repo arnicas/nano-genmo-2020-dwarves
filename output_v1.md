@@ -1,4 +1,6 @@
 
+## *'Half a loaf is better than none.'*
+
 Nguslu Everdevils was a goblin.  Nguslu Everdevils was wounded by Cog Willarrow The Combat Of Puzzling in the readable Matchedseduced in year 6. In year 7, Nguslu Everdevils was killed by Aztong Mothpanted The Feral Tundras (a titan 2) at the portmanteau Matchedseduced (struck from behind).  He was really bad at using armor properly, really bad at discipline, really bad at dodging, really bad at grasping and striking, really bad at using a shield, really bad at noticing what's going on, really bad at taking a stance and striking, really bad at wrestling. He was a member of 2 organizations. Sadly, he never had children. He lived for 1 years.
 
 **Dang Finseduced was father to Nguslu Everdevils.**
@@ -36,6 +38,8 @@ Rith Shakecloistered was a female dwarf. She lived for 85 years. Her secret goal
 **Aban Trumpetcloistered was child to Rith Shakecloistered.**
 
 Aban Trumpetcloistered was a dwarf. His secret goal was master a skill. Aban Trumpetcloistered was wounded by Ral Overhall The Fated Twilight in the outdone Lettercounsels in year 121. Aban Trumpetcloistered was wounded by Ral Overhall The Fated Twilight in the amiable Lettercounsels in year 121. Bax Blazeddemons became a buddy of Aban Trumpetcloistered to learn information in year 166. In year 204, Bosa Stuntssteal became a buddy of Aban Trumpetcloistered to learn information. Zom Ruthlessshadow became a buddy of Aban Trumpetcloistered to learn information in year 229.  He was talented at figuring out what others intend. He was a member of 2 organizations. He was related to 3 others. He lived for 112 years.
+
+## *"Best to bend it while it's a twig."*
 
 **Kadol Ivorygilt was deity to Aban Trumpetcloistered.**
 
@@ -116,6 +120,8 @@ Domas Slingsalve was a male dwarf. He lived for 210 years. His secret goal was c
 **Udil Furnacevigor was spouse to Domas Slingsalve.**
 
 Udil Furnacevigor was a female dwarf. She lived for 214 years. Her secret goal was master a skill. She was rather crap at dissecting fish. Unhappily, Udil Furnacevigor never had kids. She was a member of 2 organizations.  In year 225, A relationship began between Domas Slingsalve and preparatory Udil Furnacevigor. Udil Furnacevigor changed jobs in the uncooperative Boltedsquirted in year 225.
+
+## *'Nothing falls into the mouth of a sleeping fox.'*
 
 **Avuz was deity to Udil Furnacevigor.**
 
@@ -232,6 +238,8 @@ Unib Languagepulley was a female dwarf. Her secret goal was create a great work 
 **Tholtig Orbivory was mother to Unib Languagepulley.**
 
 Tholtig Orbivory was a dwarf. Her secret goal was craft a masterwork. Thob Constructsect was wounded by Tholtig Orbivory in the determined Tradepainted in year 217. In year 217, Thob Constructsect was wounded by Tholtig Orbivory in the devastating Tradepainted. Thob Constructsect was killed by Tholtig Orbivory (a dwarf) at the candied Tradepainted (struck by a blade) in year 217. Tholtig Orbivory changed jobs in the remorseless Tradepainted in year 200. In year 202, A relationship began between Tholtig Orbivory and differentiated Shorast Relicblotted.  She was not bad at operating a seige (whatever that means). She was a member of 2 organizations. She had 2 children. She lived for 189 years.
+
+## *'Blood is thicker than water.'*
 
 **Lurit was deity to Tholtig Orbivory.**
 
@@ -396,6 +404,8 @@ Tulon Fountainleagues was a female dwarf. She lived for 169 years. Her secret go
 **Dishmab Hailbolted was child to Tulon Fountainleagues.**
 
 Dishmab Hailbolted was a dwarf. His secret goal was craft a masterwork. In year 220, Dishmab Hailbolted changed jobs in the swooning Oileddeeps. A relationship began between Dishmab Hailbolted and enthralling Udil Earthenproblems in year 222.  He was not bad at herbalism. He was a member in the The Clasp Of Ice, an organization of dwarfs. Unhappily, Dishmab Hailbolted never had kids. He lived for 209 years.
+
+## *'The best of friends must part.'*
 
 **Sheget Godsears was deity to Dishmab Hailbolted.**
 
@@ -592,6 +602,8 @@ Dobar Windgrowl was a male goblin. His secret goal was craft a masterwork. He wa
 **Zan Clappage was child to Dobar Windgrowl.**
 
 Zan Clappage was a goblin. He had no goals to speak of. In year 153, Zan Clappage became a buddy of Mastrod Zealcalm to learn information. Zan Clappage became a buddy of Didde Uncleempires to learn information in year 159. Zan Clappage became a buddy of Nguslu Oakenvile to learn information in year 161. In year 162, Zan Clappage was killed by Terrorfate The Shadow Of Curses (a forgotten beast 54) at the warlike Growlone (cruelly struck down). Zan Clappage changed jobs in the anatomical Crushhandle in year 141.  He was rather crap at training animals, rather crap at using armor properly, rather crap at climbing, ok at crossbow, rather crap at discipline, rather crap at dissecting vermin, rather crap at dodging, really bad at grasping and striking, rather crap at using a shield, rather crap at noticing what's going on, really bad at taking a stance and striking, expert at tracking, rather crap at trapping, really bad at wrestling. He was a member of 3 organizations. Unhappily, Zan Clappage never had kids. He lived for 33 years.
+
+## *'Temper is so good a thing that we should never lose it.'*
 
 **Ral The Charcoal Of Oil was deity to Zan Clappage.**
 
@@ -1256,7 +1268,6 @@ Am Fondledgirls was a human. Her secret goal was immortality. In year 188, Ngahe
 **Ngahen Woundkeg was child to Am Fondledgirls.**
 
 Ngahen Woundkeg was a human. She was largely unmotivated. In year 188, Ngahen Woundkeg was reunited with Am Fondledgirls in the wanton Cleanmaws. Ngahen Woundkeg was foully murdered by Bosa Horrorarmor (a human) at unaided the entire Bootrock  in year 210. Ngahen Woundkeg settled in the paramount Cheerfulstirred   in year 182. Ngahen Woundkeg changed jobs in the healing Cheerfulstirred in year 184. In year 188, Ngahen Woundkeg settled in the ever-present Cleanmaws because of flight .  She was really bad at wrestling. She was a member of 5 organizations. She was related to 6 others. She lived for 38 years.
-
 
 ## *'The longer you live the more you see.'*
 
