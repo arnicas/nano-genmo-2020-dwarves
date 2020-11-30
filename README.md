@@ -13,7 +13,10 @@ I used Kate Compton's Tracery (and in particular Allison Parrish's [python port]
 
 The code tries to link characters together, giving a little tinned history of each one before moving on to their next connection.  Connections are either famil links, or members of the same organization ("entity"), worshippers of the same deity, or "event" partners -- e.g., someone's killer.  The last resort is to move to someone random and start fresh.
 
-Each time a character is picked up, a tiny bio is generated, using details from their events and skills set.
+Each time a character is picked up, a tiny bio is generated, using details from their events and skills set.  There are bugs to fix especially relating to event order.
+
+The output file is [here](https://github.com/arnicas/nano-genmo-2020-dwarves/blob/master/output_v1.md).
+
 
 ## Sample
 
