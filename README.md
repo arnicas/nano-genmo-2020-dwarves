@@ -17,3 +17,12 @@ Each time a character is picked up, a tiny bio is generated, using details from 
 
 ## Sample
 
+There are outstanding issues with event order, punctuation, and variety. But:
+
+**Olngo Hellcrest was father to Smunstu Dungeonroom.**
+
+Olngo Hellcrest was a human. His secret goal was rule the world. In year 193, It Must Have Been Cinder, a poem described as serious was written by Olngo Hellcrest dream . In year 199, My Friend Wisp, a poem described as forceful was written by Olngo Hellcrest . Esteem Dutiful, a poem described as serious was written by Olngo Hellcrest in year 205. The Calamitous Conqueror And Depression, a poem described as forceful was written by Olngo Hellcrest in year 211. We See Gleam, a poem described as forceful was written by Olngo Hellcrest in year 211. He was rather crap at caring for animals, rather crap at crossbow, rather crap at dissecting vermin, rather crap at dodging, outstanding at poetry, outstanding at speaking, rather crap at trapping, rather crap at writing. He was a member in the The Savage Hex, an organization of goblins. He was related to 10 others. He lived for 179 years.
+
+**Damsto Scratchtick was child to Olngo Hellcrest.**
+
+Damsto Scratchtick was a human. She had no goals to speak of. In year 207, Damsto Scratchtick was wounded by Darksummit The Wasp Of Glossing in the smothered Wormterrors. In year 214, The Sense And Radiance, a poem described as mechanical was written by Damsto Scratchtick . Damsto Scratchtick was foully murdered by Mebzuth Coalsea (a dwarf) at overworked the didactic Frayghouls in year 223. In year 213, Damsto Scratchtick changed jobs in the material Wormterrors. Damsto Scratchtick changed jobs in the exulting Wormterrors in year 214. She was rather crap at gelding things. She was a member in the The Dungeon Of Lies, an organization of goblins. Unhappily, Damsto Scratchtick never had kids. She lived for 22 years.
