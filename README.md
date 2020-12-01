@@ -15,17 +15,19 @@ The code tries to link characters together, giving a little tinned history of ea
 
 Each time a character is picked up, a tiny bio is generated, using details from their events and skills set.  There are bugs to fix especially relating to event ordering.
 
-The output v1 file is [here](https://github.com/arnicas/nano-genmo-2020-dwarves/blob/master/output_v1.md).
+The output v2 file (minor bug fixes from v1) is [here](https://github.com/arnicas/nano-genmo-2020-dwarves/blob/master/output2.md).
 
 
 ## Sample
 
-There are outstanding issues with event order, punctuation, and variety. But:
+There are outstanding issues with punctuation and a few event templates, but v2 fixes a few issues in the nano v1 entry.
 
-**Olngo Hellcrest was father to Smunstu Dungeonroom.**
+## *"A good thing is soon snatched up."*
 
-Olngo Hellcrest was a human. His secret goal was rule the world. In year 193, It Must Have Been Cinder, a poem described as serious was written by Olngo Hellcrest dream . In year 199, My Friend Wisp, a poem described as forceful was written by Olngo Hellcrest . Esteem Dutiful, a poem described as serious was written by Olngo Hellcrest in year 205. The Calamitous Conqueror And Depression, a poem described as forceful was written by Olngo Hellcrest in year 211. We See Gleam, a poem described as forceful was written by Olngo Hellcrest in year 211. He was rather crap at caring for animals, rather crap at crossbow, rather crap at dissecting vermin, rather crap at dodging, outstanding at poetry, outstanding at speaking, rather crap at trapping, rather crap at writing. He was a member in the The Savage Hex, an organization of goblins. He was related to 10 others. He lived for 179 years.
+**Asu Fellmunched was a co-member with Rin Confusedrenowned in the organization The Council Of Stances.**
 
-**Damsto Scratchtick was child to Olngo Hellcrest.**
+Asu Fellmunched was a male human. He lived for 220 years. He was largely unmotivated. He had no skills. Unhappily, Asu Fellmunched never had kids. He was a member in the The Council Of Stances, an organization of humans.  
 
-Damsto Scratchtick was a human. She had no goals to speak of. In year 207, Damsto Scratchtick was wounded by Darksummit The Wasp Of Glossing in the smothered Wormterrors. In year 214, The Sense And Radiance, a poem described as mechanical was written by Damsto Scratchtick . Damsto Scratchtick was foully murdered by Mebzuth Coalsea (a dwarf) at overworked the didactic Frayghouls in year 223. In year 213, Damsto Scratchtick changed jobs in the material Wormterrors. Damsto Scratchtick changed jobs in the exulting Wormterrors in year 214. She was rather crap at gelding things. She was a member in the The Dungeon Of Lies, an organization of goblins. Unhappily, Damsto Scratchtick never had kids. She lived for 22 years.
+**Luc Controlcaves was father to Asu Fellmunched.**
+
+Luc Controlcaves was a male human. He lived for 198 years.  He was not bad at clothesmaking, rather crap at telling jokes, rather crap at consoling others, really bad at conversation, really bad at flattery, really bad at intimidation, rather crap at figuring out what others intend, really bad at lying, really bad at negotiation, rather crap at persuasion, not bad at woodcraft. He was related to 4 others. Luc Controlcaves was a member in the The Confederations Of Duty, an organization of humans.  In year 197, Luc Controlcaves settled  in the shoestring Crushappeared  . Luc Controlcaves settled  in the hitless Cleanmaws because of flight  in year 217. In year 217, Luc Controlcaves changed jobs in the totalled Cleanmaws. In year 218, a relationship began between Luc Controlcaves and waterproof Gisep Throwerinch. Luc Controlcaves changed jobs in the shoestring Cleanmaws in year 224.

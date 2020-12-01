@@ -1,5 +1,5 @@
 EventType	SubTypeCol	SubTypeVal	FieldsAssociated	TemplateString
-change hf state	state	settled		#hfid_string# settled in #site_id_string# #reason_string# #mood_string#
+change hf state	state	settled		#hfid_string# settled  #site_id_string# #reason_string# #mood_string#
 change hf state	state	wandering		#hfid_string# wandered #reason_string#
 change hf state	state	visiting		#hfid_string# visited #adjective# #site_id_string# for #reason_string#
 change hf state	state	refugee	"id,subregion_id,feature_layer_id,state,reason,hfid,coords,site_id,mood,year,seconds72,state"	#hfid_string# was a refugee #reason_string#
@@ -7,68 +7,68 @@ add hf entity link			"id,civ_id,year,seconds72"
 created site			"id,site_civ_id,site_id,civ_id,year,builder_hfid"	#builder_hfid_string# created #site_id_string# in #civ_id_string#
 created structure			"id,structure_id,site_civ_id,site_id,civ_id,year,builder_hfid"	#builder_hfid_string# created #structure_id_string# in #adjective# #site_id_string# in #civ_id_string#
 add hf site link			"id,site_id,year,seconds72"	
-artifact created			"id,artifact_id,hist_figure_id,site_id,year,seconds72"	#hist_figure_id_string# created artifact #artifact_id_string# in #adjective# #site_id_string#
-agreement formed			"agreement_id,id"	#agreement_id_string# happened
-artifact stored			"id,artifact_id,hist_figure_id,site_id,year,seconds72"	The artifact #artifact_id_string# was stored by #hist_figure_id_string# at #adjective# #site_id_string#
+artifact created			"id,artifact_id,hist_figure_id,site_id,year,seconds72"	#hist_figure_id_string# created artifact #artifact_id_string# #site_id_string#
+agreement formed			"agreement_id,id"	#agreement_id_string# was signed
+artifact stored			"id,artifact_id,hist_figure_id,site_id,year,seconds72"	#artifact_id_string# was stored by #hist_figure_id_string# #site_id_string#
 add hf hf link			"hfid_target,id,hfid,year,seconds72"	A relationship began between #hfid_string# and #adjective# #hfid_target_string#
-change hf job			"id,subregion_id,hfid,site_id,year,seconds72"	#hfid_string# changed jobs in #site_id_string#
-hf simple battle event			"group_2_hfid,id,group_1_hfid,subregion_id,subtype,site_id,year,seconds72"	A battle with subtype '#subtype_string#' occurred between #group_1_hfid_string# and #group_2_hfid_string# at #adjective# #site_id_string#
-hf abducted			"id,snatcher_hfid,site_id,year,target_hfid,seconds72"	#snatcher_hfid_string# abducted #target_hfid_string# from #site_id_string#
-hf travel			"group_hfid,id,subregion_id,feature_layer_id,coords,site_id,year,seconds72"	#group_hfid_string# travelled in #site_id_string#
+change hf job			"id,subregion_id,hfid,site_id,year,seconds72"	#hfid_string# changed jobs #site_id_string#
+hf simple battle event			"group_2_hfid,id,group_1_hfid,subregion_id,subtype,site_id,year,seconds72"	A battle with subtype '#subtype_string#' occurred between #group_1_hfid_string# and #group_2_hfid_string# #site_id_string#
+hf abducted			"id,snatcher_hfid,site_id,year,target_hfid,seconds72"	#snatcher_hfid_string# abducted #target_hfid_string#  #site_id_string#
+hf travel			"group_hfid,id,subregion_id,feature_layer_id,coords,site_id,year,seconds72"	#group_hfid_string# travelled #site_id_string#
 hf new pet			"group_hfid,id,subregion_id,feature_layer_id,year,seconds72"	#group_hfid_string# got a new pet
-ceremony			"id,schedule_id,occasion_id,site_id,civ_id,year,seconds72"	There was a ceremony at #site_id_string# for #occasion_id_string#
-procession			"id,schedule_id,occasion_id,site_id,civ_id,year,seconds72"	There was a procession at #site_id_string# for #occasion_id_string#
-hf died	cause	struck	"id,slayer_caste,subregion_id,cause,hfid,slayer_hf_id,site_id,year,slayer_race,seconds72"	#hfid_string# was killed by #slayer_hfid_string# (#slayer_race_string#) at #site_id_string# #cause_string#
-hf died	cause	old age		#hfid_string# died peacefully of old age at #site_id_string#
-hf died	cause	murdered		#hfid_string# was foully murdered by #slayer_hfid_string# (#slayer_race_string#) at #adjective# #site_id_string# 
-hf died	cause	suicide leaping		#hfid_string# committed suicide by leaping off a cliff at #adjective# #site_id_string#
-hf died	cause	suicide drowned		#hfid_string# committed suicide by drowning #heroSelf# at #site_id_string#
-hf died	cause	shot		#slayer_hfid_string# #slayer_race_string# shot and killed #hfid_string# at #site_id_string# 
-hf died	cause	exec beheaded		#hfid_string# was beheaded at #adjective# #site_id_string#
-performance			"id,schedule_id,occasion_id,site_id,civ_id,year,seconds72"	There was a performance at #site_id_string# for #occasion_id_string#
-competition			"id,schedule_id,occasion_id,competitor_hfid,winner_hfid,site_id,civ_id,year,seconds72"	"In a competition at #site_id_string#, #competitor_hfid_string# competed and #winner_hfid_string# won"
-creature devoured			"id,site_id,year,seconds72"	A creature devoured at #site_id_string#
+ceremony			"id,schedule_id,occasion_id,site_id,civ_id,year,seconds72"	There was a ceremony #site_id_string# for #occasion_id_string#
+procession			"id,schedule_id,occasion_id,site_id,civ_id,year,seconds72"	There was a procession  #site_id_string# for #occasion_id_string#
+hf died	cause	struck	"id,slayer_caste,subregion_id,cause,hfid,slayer_hf_id,site_id,year,slayer_race,seconds72"	#hfid_string# was killed by #slayer_hfid_string# (#slayer_race_string#)  #site_id_string# #cause_string#
+hf died	cause	old age		#hfid_string# died peacefully of old age #site_id_string#
+hf died	cause	murdered		#hfid_string# was foully murdered by #slayer_hfid_string# (#slayer_race_string#)  #site_id_string# 
+hf died	cause	suicide leaping		#hfid_string# committed suicide by leaping off a cliff #site_id_string#
+hf died	cause	suicide drowned		#hfid_string# committed suicide by drowning #heroSelf# #site_id_string#
+hf died	cause	shot		#slayer_hfid_string# #slayer_race_string# shot and killed #hfid_string# #site_id_string# 
+hf died	cause	exec beheaded		#hfid_string# was beheaded  #site_id_string#
+performance			"id,schedule_id,occasion_id,site_id,civ_id,year,seconds72"	There was a performance #site_id_string# for #occasion_id_string#
+competition			"id,schedule_id,occasion_id,competitor_hfid,winner_hfid,site_id,civ_id,year,seconds72"	"In a competition #site_id_string#, #competitor_hfid_string# competed and #winner_hfid_string# won"
+creature devoured			"id,site_id,year,seconds72"	A creature devoured #site_id_string#
 item stolen			"circumstance,id,circumstance_id,year,seconds72"	An item was stolen because of #circumstance_string#
 create entity position			"id,year,seconds72"	
-field battle			"id,subregion_id,defender_civ_id,coords,attacker_general_hfid,year,attacker_civ_id,defender_general_hfid,seconds72"	#attacker_civ_id_string# under general #attacker_general_hfid_string# battled #defender_civ_id_string# under general #defender_general_hfid_string# in #site_id_string#
+field battle			"id,subregion_id,defender_civ_id,coords,attacker_general_hfid,year,attacker_civ_id,defender_general_hfid,seconds72"	#attacker_civ_id_string# under general #attacker_general_hfid_string# battled #defender_civ_id_string# under general #defender_general_hfid_string# #site_id_string#
 entity created			"id,structure_id,entity_id,site_id,year,seconds72"	#entity_id_string# was created at #adjecive# #site_id_string# in #structure_id_string#
 entity primary criminals			"id,entity_id,site_id,year"	
 peace accepted			"id,year,seconds72"	Peace was accepted
-hf wounded			"id,subregion_id,wounder_hfid,site_id,year,woundee_hfid,seconds72"	#woundee_hfid_string# was wounded by #wounder_hfid_string# in #site_id_string#
-attacked site			"id,defender_civ_id,attacker_general_hfid,year,site_id,site_civ_id,attacker_civ_id,defender_general_hfid,seconds72"	#attacker_civ_id_string# under general #attacker_general_hfid_string# attacked #defender_civ_id_string# under general #defender_general_hfid_string# in #site_id_string#
+hf wounded			"id,subregion_id,wounder_hfid,site_id,year,woundee_hfid,seconds72"	#woundee_hfid_string# was wounded by #wounder_hfid_string#  #site_id_string#
+attacked site			"id,defender_civ_id,attacker_general_hfid,year,site_id,site_civ_id,attacker_civ_id,defender_general_hfid,seconds72"	#attacker_civ_id_string# under general #attacker_general_hfid_string# attacked #defender_civ_id_string# under general #defender_general_hfid_string#  #site_id_string#
 plundered site			"id,defender_civ_id,site_civ_id,site_id,year,attacker_civ_id,seconds72"	#site_civ_id_string# was plundered by #attacker_civ_id_string#
 written content composed			"circumstance,reason_id,id,reason,circumstance_id,hist_figure_id,site_id,year,wc_id,seconds72"	#wc_id_string# was written by #hist_figure_id_string#  #circumstance_string# #reason_string#
 changed creature type			"id,old_caste,old_race,changee_hfid,new_race,new_caste,year,changer_hfid,seconds72"	"#changee_hfid_string# was changed from #old_caste_string# and #old_race_string# into #new_race_string#,  #new_caste_string# by #changer_hfid_string#"
 site dispute			"id,site_id_2,dispute,site_id_1,entity_id_2,entity_id_1,year,seconds72"	#site_id_1_string# with #entity_id_1_string# was disputed by #entity_id_2_string# because #dispute_string#
-body abused			"id,coords,site_id,year,seconds72"	A body was abused at #coords_string# in #site_id_string#
+body abused			"id,coords,site_id,year,seconds72"	A body was abused at #coords_string# #site_id_string#
 remove hf site link			"id,site_id,year,seconds72"	
 assume identity			"identity_id,id,target_enid,year,trickster_hfid,seconds72"	"#trickster_hfid_string# assumed the entity of #target_enid_string#,  #identity_id_string#"
-knowledge discovered			"id,knowledge,hfid,year,seconds72"	#knowledge_string# was discovered by #hfid_string#
-hf attacked site			"id,defender_civ_id,site_civ_id,attacker_hfid,site_id,year,seconds72"	#attacker_hfid_string# attacked site #site_id_string# defended by #defender_civ_id_string#
+knowledge discovered			"id,knowledge,hfid,year,seconds72"	#hfid_string# discovered #knowledge_string#
+hf attacked site			"id,defender_civ_id,site_civ_id,attacker_hfid,site_id,year,seconds72"	#attacker_hfid_string# attacked #site_id_string# defended by #defender_civ_id_string#
 hf destroyed site			"id,defender_civ_id,site_civ_id,attacker_hfid,site_id,year,seconds72"	#attacker_hfid_string# destroyed site #site_id_string# defended by #defender_civ_id_string#
 hf gains secret goal			"secret_goal,id,hfid,year,seconds72"	#hfid_string# achieved secret goal #secret_goal_string#
-entity relocate			"id,structure_id,entity_id,site_id,year,seconds72"	#entity_id_string# relocated to #structure_id_string# in #site_id_string#
+entity relocate			"id,structure_id,entity_id,site_id,year,seconds72"	#entity_id_string# relocated to #structure_id_string#  #site_id_string#
 site tribute forced			"id,defender_civ_id,year,site_id,site_civ_id,attacker_civ_id,season,seconds72"	#attacker_civ_id_string# forced tribute for site #site_id_string# of #site_civ_id_string# by #defender_civ_id_string#
 hfs formed reputation relationship			"id,identity_id2,hfid2,hf_rep_2_of_1,hfid1,site_id,identity_id1,year,hf_rep_1_of_2,seconds72"	#hfid1_string# became a buddy of #hfid2_string# to learn information
-reclaim site			"id,site_civ_id,site_id,civ_id,year"	#site_civ_id_string# was reclaimed at #site_id_string#
+reclaim site			"id,site_civ_id,site_id,civ_id,year"	#site_civ_id_string# was reclaimed #site_id_string#
 remove hf entity link			"id,civ_id,year,seconds72"	
-artifact possessed			"reason_id,id,artifact_id,reason,hist_figure_id,site_id,year,seconds72"	#hist_figure_id_string# possessed #artifact_id_string# because of #reason_string# and #reason_id_string#
+artifact possessed			"reason_id,id,artifact_id,reason,hist_figure_id,site_id,year,seconds72"	#hist_figure_id_string# possessed #artifact_id_string# because of #reason_string# #reason_id_string#
 hf learns secret			"id,artifact_id,student_hfid,year,interaction,seconds72"	#student_hfid_string# learned a secret because of #interaction_string# and the artifact #artifact_id_string#
-hf profaned structure			"id,structure_id,site_id,hist_fig_id,year,seconds72"	#hist_fig_id_string# profaned #structure_id_string# in #site_id_string#
-hf does interaction			"id,doer_hfid,interaction,year,target_hfid,seconds72"	#doer_hfid_string# performed interaction #interaction_string# on #target_hfid_string#
-hf relationship denied			"id,relationship,subregion_id,seconds72,reason,site_id,year,target_hfid,seeker_hfid,reason_id"	#seeker_hfid_string# sought a relationship #relationship_string# with #target_hfid_string# and was denied for #reason_string#
-change hf body state			"id,structure_id,hfid,coords,site_id,year,body_state"	#hfid_string# changed body state to #body_state_string# in #site_id_string#
-artifact lost			"id,artifact_id,site_id,year,seconds72"	#artifact_id_string# was lost in #site_id_string#
+hf profaned structure			"id,structure_id,site_id,hist_fig_id,year,seconds72"	#hist_fig_id_string# profaned #structure_id_string#  #site_id_string#
+hf does interaction			"id,doer_hfid,interaction,year,target_hfid,seconds72"	#doer_hfid_string#  #interaction_string# #target_hfid_string#
+hf relationship denied			"id,relationship,subregion_id,seconds72,reason,site_id,year,target_hfid,seeker_hfid,reason_id"	#seeker_hfid_string# sought a relationship #relationship_string# with #target_hfid_string# and was denied (#reason_string#)
+change hf body state			"id,structure_id,hfid,coords,site_id,year,body_state"	#hfid_string# changed body state to #body_state_string# #site_id_string#
+artifact lost			"id,artifact_id,site_id,year,seconds72"	#artifact_id_string# was lost #site_id_string#
 peace rejected			"id,year,seconds72"	Peace was rejected
-dance form created			"circumstance,id,form_id,seconds72,reason,circumstance_id,hist_figure_id,site_id,year,reason_id"	Dance form #form_id_string# was composed by #hist_figure_id_string# in #site_id_string# because of #reason_string# and #circumstance_id_string#
-hf reunion			"group_2_hfid,id,group_1_hfid,site_id,year,seconds72"	#group_1_hfid_string# was reunited with #group_2_hfid_string# in #site_id_string#
-hf confronted			"id,reason,hfid,coords,site_id,situation,year,seconds72"	#hfid_string# was confronted with situation #situation_string# at #site_id_string#
+dance form created			"circumstance,id,form_id,seconds72,reason,circumstance_id,hist_figure_id,site_id,year,reason_id"	"Dance form #form_id_string# was composed by #hist_figure_id_string# #site_id_string# because of #reason_string#, #circumstance_string#"
+hf reunion			"group_2_hfid,id,group_1_hfid,site_id,year,seconds72"	#group_1_hfid_string# was reunited with #group_2_hfid_string# #site_id_string#
+hf confronted			"id,reason,hfid,coords,site_id,situation,year,seconds72"	#hfid_string# was confronted with situation #situation_string# #site_id_string#
 artifact given			"id,artifact_id,receiver_entity_id,receiver_hist_figure_id,giver_hist_figure_id,year"	#giver_hist_figure_id_string# gave #artifact_id_string# to #receiver_hist_figure_id_string# of #receiver_entity_id_string#
 artifact claim formed			"id,artifact_id,entity_id,hist_figure_id,position_profile_id,year,claim"	#hist_figure_id_string# of #entity_id_string# with #position_profile_id_string# made #claim_string# to #artifact_id_string#
 created world construction			"id,site_id1,wcid,site_civ_id,site_id2,master_wcid,civ_id,year"	
-razed structure			"id,structure_id,site_id,civ_id,year,seconds72"	#structure_id_string# in #site_id_string# was razed
-musical form created			"circumstance,id,form_id,hist_figure_id,site_id,year,seconds72"	Musical form #form_id_string# was composed by #hist_figure_id_string# in #site_id_string# because of #circumstance_string#
-new site leader			"id,new_leader_hfid,defender_civ_id,new_site_civ_id,year,site_id,site_civ_id,attacker_civ_id,seconds72"	#site_id_string# got a new leader #new_leader_hfid_string#
-poetic form created			"circumstance,id,form_id,hist_figure_id,site_id,year,seconds72"	Poetic form #form_id_string# was composed by #hist_figure_id_string# due to #circumstance_string# in #site_id_string#
+razed structure			"id,structure_id,site_id,civ_id,year,seconds72"	#structure_id_string#  #site_id_string# was razed
+musical form created			"circumstance,id,form_id,hist_figure_id,site_id,year,seconds72"	Musical form #form_id_string# was composed by #hist_figure_id_string# #site_id_string# because of #circumstance_string#
+new site leader			"id,new_leader_hfid,defender_civ_id,new_site_civ_id,year,site_id,site_civ_id,attacker_civ_id,seconds72"	"#site_id_string#  there was a new leader, #new_leader_hfid_string#"
+poetic form created			"circumstance,id,form_id,hist_figure_id,site_id,year,seconds72"	Poetic form #form_id_string# was composed by #hist_figure_id_string# due to #circumstance_string# #site_id_string#
 artifact found			"id,artifact_id,hist_figure_id,site_id,year"	#hist_figure_id_string# found artifact #artifact_id_string#
 artifact recovered			"id,artifact_id,subregion_id,hist_figure_id,year,seconds72"	#hist_figure_id_string# recovered #artifact_id_string# in #subregion_id_string#

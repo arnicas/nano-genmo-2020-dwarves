@@ -1,3 +1,4 @@
+from collections import Counter
 import numpy as np
 import pandas as pd
 import re
@@ -15,7 +16,8 @@ api = 'http://127.0.0.1:9000/api/' #running https://gitlab.com/df_storyteller/df
 
 adjectives = cd.adjectives
 proverbs = cd.proverbs
-wordcount = 0
+
+recorded = {}
 
 # Utilities
 
@@ -175,6 +177,8 @@ def get_all_events(idnumber, conn):
     else:
         return None
 
+def remove_cap(template):
+    return template.lower()
 
 def get_event_strings(hf, count=1):
     hfid = hf['id']
@@ -196,13 +200,14 @@ def get_event_strings(hf, count=1):
             # there may be no template for this event type.
             if template:
                 fields = get_fields(template)
+                # issue here with .capitalize and year
                 print("template", template)
                 rules = write_field_terminal_rules(event, fields, namerules)
                 #print("Data:", row)
                 #print("rules", rules)
                 # time modifier can go anywhere
                 if 'year' in event:
-                    origin = ['In year #year#, ' + template + ".", template + " in year #year#."]  # year applies to all of them can appear either place.
+                    origin = ['In year #year#, ' + template.lower() + ".", template + " in year #year#."]  # year applies to all of them can appear either place.
                 else:
                     origin = [template + "."]
                 rules['adjective'] = adjectives
@@ -217,13 +222,15 @@ def get_event_strings(hf, count=1):
                     continue
                 else:
                     if len(strings) <= count:
-                        strings.append(text)
+                        strings.append({'year': event['year'],'text': text})
                     else:
-                        return strings
+                        break
             else:
                 continue
         if strings:
-            return strings
+            strings.sort(key=lambda x: int(x['year']))
+            texts = [x['text'] for x in strings]
+            return [" ".join(texts)]
         return [""]
 
 # Get HF from Code
@@ -439,6 +446,7 @@ def hf_analysed(hf):
 
 def describe_hf(analysed):
     global handle
+    global recorded
     rules = {
     'origin': ["#[#setPronouns#][hero:#hf_name#]top#"],
     }
@@ -454,7 +462,8 @@ def describe_hf(analysed):
             "#hero# #heroWas# a #caste# #race#. #goals# #skills# #age# #entity# #links# #events#",
             "#hero# #heroWas# a #race#. #goals# #events# #pet# #skills# #entity# #links# #age#"]
     else:
-        rules['top'] = ["#hero# #heroWas# a deity. #spheres# #worshippers#"]
+        rules['top'] = ["#hero# #heroWas# a deity. #spheres# #worshippers#", 
+                        "#hero# #heroWas# a deity. #worshippers# #spheres#"]
     rules = add_rules(analysed, rules)
     rules['events'] = [event_strings]
     grammar = tracery.Grammar(rules)
@@ -492,6 +501,12 @@ def get_worshippers_text(analysed):
     # add random worshippers?
     return [f"#heroThey.capitalize# had {count} worshippers.", f"{count} beings worshipped #hero#."]
 
+def get_knowledge_string(text):
+    if ":" in text:
+        parts = text.split(':')
+        return f"knowledge of {parts[-1]}"
+    else:
+        return "unknown knowledge"
 
 def get_goals_text(analysed):
     # comes from api as a text list, not a string.
@@ -598,7 +613,10 @@ def skill_fix(skill):
     'set_bone': 'setting bones',
     'forge_weapon': 'forging weapons',
     'pike': 'weilding a pike',
-    'geld': 'gelding things'
+    'geld': 'gelding things',
+    'fluid_engineer': 'fluid engineering',
+    'optics_engineer': 'optics engineering',
+    'bonecarve': 'bone carving'
     }
     try:
         return fixes[skill]
@@ -685,7 +703,7 @@ def get_site_name(text, *params):
             conn)
         # should be just one row
         rows = dict(rows[0])
-        return f"the {random.choice(adjectives)} {rows['name'].title()}"
+        return f"in the {random.choice(adjectives)} {rows['name'].title()}"
 
 def get_hfid_name(id):
     if id != '':
@@ -728,6 +746,11 @@ def get_best_worst_skills_strings():
         result = "#heroThey.capitalize# had no skills."
     return result
 
+def get_secret_goal_string(text):
+    if text:
+        return text
+    else:
+        return ""
 
 def get_link_strings(analysed):
     strings = []
@@ -747,6 +770,18 @@ def get_link_strings(analysed):
 
 def get_state_string(text):
     return text
+
+def get_interaction_string(text):
+    # phrased as "x did thing to y"
+    text = text.lower()
+    if 'deity_curse' in text:
+        parts = text.split('_')
+        parts = [x for x in parts if x.isalpha()]
+        parts = parts[2:]
+        return " applied the curse of the " + ' '.join(parts) + " to "
+    else:
+        return " cursed "
+
     
 def get_entity_strings(analysed):
     count = len(analysed['entity_link'])
@@ -766,6 +801,17 @@ def get_entity_strings(analysed):
         strings.append("#hero.capitalize# never joined any groups.")
         strings.append("#heroThey.capitalize# never worked with organizations.")
     return strings
+
+def get_circumstance_string(text):
+    if text:
+        if 'dream' in text:
+            return 'after a dream'
+        if 'nightmare' in text:
+            return 'after a nightmare'
+        if 'pray' in text:
+            return 'meant to be a prayer'
+    else:
+        return ''
 
 def get_written_content_name(id):
     res = requests.get('http://127.0.0.1:9000/api/written_contents/' + str(id))
@@ -830,8 +876,12 @@ name_expansion_rules['artifact_id_string'] = ["#artifact_id.get_artifact_name#"]
 name_expansion_rules['cause_string'] = ["#cause.get_cause_string#"]
 name_expansion_rules['wc_id_string'] = ["#wc_id.get_written_content_name#"]
 name_expansion_rules['slayer_race_string'] = ["#slayer_race.get_slayer_race_string#"]
-name_expansion_rules['mood_string'] = ["#mood.get_mood_string#"]  
-name_expansion_rules['reason_string'] = ["#reason.get_reason_string#"] 
+name_expansion_rules['mood_string'] = ["#mood.get_mood_string#"]
+name_expansion_rules['secret_goal_string'] = ['#secret_goal#']
+name_expansion_rules['knowledge_string'] = ["#knowledge.get_knowledge_string#"]
+name_expansion_rules['circumstance_string'] = ["#circumstance.get_circumstance_string#"]
+name_expansion_rules['reason_string'] = ["#reason.get_reason_string#"]
+name_expansion_rules['interaction_string'] = ["#interaction.get_interaction_string#"]
 name_expansion_rules['goal_string'] = ["#goal.get_goals#"]  # renders these into string
 
 queries = {
@@ -845,7 +895,11 @@ queries = {
     'get_mood_string': get_mood_string,
     'get_reason_string': get_reason_string,
     'get_slayer_race_string': get_slayer_race_string,
-    'get_written_content_name': get_written_content_name
+    'get_secret_goal_string': get_secret_goal_string,
+    'get_written_content_name': get_written_content_name,
+    'get_knowledge_string': get_knowledge_string,
+    'get_interaction_string': get_interaction_string,
+    'get_circumstance_string': get_circumstance_string
 }
 
 def add_rules(analysed, rules):
@@ -871,8 +925,8 @@ def add_rules(analysed, rules):
     return rules
 
 def print_transition(prev, new, context, source):
-    if '_type' in context and source == 'entity':
-        transition = f"{prev['name'].title()} was a co-member with {new['name'].title()} in {context['name'].title()}."
+    if source == 'entity':
+        transition = f"{new['name'].title()} was a co-member with {prev['name'].title()} in the organization {context.title()}."
     elif source == "event":
         transition = f"Something happened between {new['name'].title()} and {prev['name'].title()}."
     elif source == "random":
@@ -882,38 +936,56 @@ def print_transition(prev, new, context, source):
     #print("transition", transition)
     return transition
 
+def get_close_text(records):
+    total = len(records['exclude'])
+    races = Counter(records['races'])
+    print(records)
+    print(races)
+    years = [int(year) for year in recorded['birth_years']]
+    earliest = np.min(years)
+    latest = np.max(years)
+    string = f'\n### Appendix\nThis sad tale featured {total} historical figures, the earliest born in {str(earliest)}, the latest born in {str(latest)}.'
+    string += " The races involved were " + ','.join([key for key in races.keys() if key]) + '.\n'
+    return string
+
 def loop(count = 5):
     global handle
+    global recorded
     alltext = ''
-    exclude = []
-    handle.write("\n##*\"" + random.choice(proverbs) + "\"*\n")
-    (myid, hf, context) = get_random_hf_and_id(exclude=exclude)
+    recorded['exclude'] = []
+    recorded['races'] = []
+    recorded['birth_years'] = []
+    handle.write("\n## *\"" + random.choice(proverbs) + "\"*\n")
+    (myid, hf, context) = get_random_hf_and_id(exclude=recorded['exclude'])
     analysed = hf_analysed(hf)
-    exclude.append(myid)
+    recorded['races'].append(hf['race'])
+    recorded['birth_years'].append(hf['birth_year'])
+    recorded['exclude'].append(myid)
     print("id", myid)
     text = describe_hf(analysed)
-    alltext += text + '\n'
     for i in range(count):
         prevhf = hf.copy()
-        (myid, hf, context, source) = get_new_hf(analysed, exclude=exclude)
+        (myid, hf, context, source) = get_new_hf(analysed, exclude=recorded['exclude'])
         print(i)
         analysed = hf_analysed(hf)
         print("new id", myid)
         # transition text
         #print("source text is:", source)
-        if source == "random":
-            handle.write("\n##*\"" + random.choice(proverbs) + "\"*\n")
+        if source == "random" or source == "entity" or source == 'worsshipper':
+            handle.write("\n## *\"" + random.choice(proverbs) + "\"*\n")
         trans = print_transition(prevhf, hf, context, source)
         handle.write("\n**")
         handle.write(trans)
         handle.write("**\n")
-        exclude.append(myid)
+        recorded['exclude'].append(myid)
+        recorded['races'].append(hf['race'])
+        recorded['birth_years'].append(hf['birth_year'])
         text = describe_hf(analysed)
-        alltext += text
+    handle.write(get_close_text(recorded))
     handle.close()
-    return alltext
+    return
 
-handle = open('test_file.md', 'a')
+handle = open('test_file6.md', 'w')
 handle.write("\n")
-loop(count = 210)
+loop(count = 100)
 handle.close()
