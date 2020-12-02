@@ -15,6 +15,49 @@ The code tries to link characters together, giving a little tinned history of ea
 
 Each time a character is picked up, a tiny bio is generated, using details from their events and skills set.  There are bugs to fix especially relating to event ordering.
 
+The database table data looks something like this:
+
+```
+[('index', 536),
+  ('id', '536'),
+  ('year', '3'),
+  ('seconds72', '16800'),
+  ('type', 'hf died'),
+  ('hfid', '259'),
+  ('site_id', '25'),
+  ('slayer_hfid', '84'),
+  ('slayer_race', 'NIGHT_CREATURE_9'),
+  ('slayer_caste', 'MALE'),
+  ('cause', 'struck')],
+
+[('id', '0'),
+  ('name', 'nocpur haleflew the snarling simplicity'),
+  ('race', 'HYDRA'),
+  ('caste', 'FEMALE'),
+  ('appeared', '1'),
+  ('birth_year', '-272'),
+  ('death_year', '204'),
+  ('associated_type', 'STANDARD'),
+  ('entity_link',
+   "[OrderedDict([('link_type', 'enemy'), ...('entity_id', '997')]), OrderedDict([('link_type', 'enemy'), ('entity_id', '1151')])]"),
+  ('sphere', "['muck', 'rebirth', 'strength']")]
+```
+
+In order to make text out of this, there are string replacement rules and templates (for the events in particular).  A template string for an event looks like:
+
+```
+#hfid_string# settled  #site_id_string# #reason_string# #mood_string#
+```
+
+In brief, for each historical figure, the code create grammar terminals from the id numbers, with functions that look up the names in the correct table until the string is filled in with text only.  Since many fields optionally appear, some strings return "" if they can't be resolved.
+
+```
+rules['hfid_string'] = [#hfid.get_name_string#]
+rules['hfid'] = ['340']
+```
+
+I'll clean up the code and make classes etc in the next few weeks.
+
 The output v2 file (minor bug fixes from v1) is [here](https://github.com/arnicas/nano-genmo-2020-dwarves/blob/master/output2.md).
 
 
