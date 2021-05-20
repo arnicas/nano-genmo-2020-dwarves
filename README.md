@@ -1,6 +1,8 @@
 
 # Dwarf Fortress Legends
 
+_AlERT: This code repo is a mess, because of the short deadline under which I did it... it's being refactored and updated for a blog post._
+
 Dwarf Fortress, in legends mode, can generate a world history stored in a legends.xml file, which you can extract and parse if you really want to ([info](https://dwarffortresswiki.org/index.php/DF2014:Legends)).  Over the past several years ([see 2014 talk](https://www2.slideshare.net/arnicas/mining-someone-elses-magic-world-dwarf-fortress-story-generation))I've dabbled at this, moving the xml contents into a SQLite database format and using text generation to try to "describe" what's in the file.  My data file is posted at [my drive](https://drive.google.com/file/d/1xQjFVABP10uVskEpkEuOWUa-LWt4L9Xo/view?usp=sharing). I haven't yet posted my code to convert the legends file, sorry.
 
 Fyi: The project at [DF-Storyteller]( https://gitlab.com/df_storyteller/df-storyteller) is also aimed at parsing and serving data from these files, and does a great job, but is in progress and missing some usability related functionality so far. (Thanks to Jacob Garbe for pointing it out!)
